@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <title>Fetch</title>
+    <title>Grub's Up!</title>
   </head>
   <body>
-    <ul class="item-header">
-      <li>test text</li>
-    </ul>
-    <section id="recipe-section">
-      <h2 class="section-heading">Welcome to the Recipe Finder!</h2>
+    <header>
+      <h1>
+        <img id = "logo" src= "images/logo.jpg">
+        Grub's Up!
+        <h2>Finding food inspiration has never been so easy....</h2>
+      </h1>
+    </header>
+    <section id="search-section">
       <input
         aria-label="food-input"
         id="food-input"
         onchange="handleFoodChange()"
       />
       <button id="recipe-button">
-        Give me a recipe!
+        Give me recipe ideas!
       </button>
-      <a id="recipe-label"></a>
     </section>
-    <section>
+    <section id="recipe-section">
       <ul id="recipe-list"></ul>
     </section>
     <script src="./main.js"></script>

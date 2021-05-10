@@ -49,20 +49,28 @@ async function fetchRecipe(food) {
     console.log(items);
     for (let i=0; i<items.length; i++){
       console.log(items[i].recipe.label);
+      // create recipe section
+      let liSection = document.createElement("section");
+      liSection.classList.add("item-section");
+      // create recipe title
       let liItem = document.createElement("li");
       liItem.innerText = items[i].recipe.label;
       liItem.classList.add("item-header");
       liItem.id = i;
       console.log("list item added");
+      // create image
+      let liItemImage = document.createElement("img");
+      liItemImage.src = items[i].recipe.image;
+      // create link to recipe
       let liItemLink = document.createElement("a");
       liItemLink.innerText = "click for full recipe";
       liItemLink.classList.add("outside-link");
       liItemLink.href=items[i].recipe.url;
-      let liItemImage = document.createElement("img");
-      liItemImage.src = items[i].recipe.image;
-      ulRecipeList.appendChild(liItem);
-      liItem.appendChild(liItemImage);
-      liItem.appendChild(liItemLink);
+      // add to DOM
+      ulRecipeList.appendChild(liSection);
+      liSection.appendChild(liItem);
+      liSection.appendChild(liItemImage);
+      liSection.appendChild(liItemLink);
     }
   }
   

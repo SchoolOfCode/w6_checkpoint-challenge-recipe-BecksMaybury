@@ -1,17 +1,77 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color:  rgb(237, 248, 207);
+}
+header{
+    display:flex;
+    width: 100vw;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+#logo {
+    /* display: inline-block; */
 }
 img {
     display: block;
     width: 20%;
     border-radius: 15px;
 }
-.item-header {
-    color: purple;
+h1{
+    display: flex;
+    color: rgb(221, 24, 33);
+    font-size: 8vw     ;
+    font-style: italic;  
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+h2{
+    /* display: block; */
+    align-items: center;
+    font-size: 2.5vw;
+    color: rgb(161,198,66);
+}
+#search-section {
+    border-top: 1vw solid rgb(161,198,66);
+    border-bottom: .5vw inset rgb(161,198,66);
+    display:flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* padding: 12%; */
+}
+#recipe-button{
+    border-radius: 10px;
+    height: 2vw;
+    font-size: 1.5vw;
     font-weight: bold;
-    font-size: 3vw;
+    color:rgb(61, 59, 59);
+    background-color: rgba(161,198,66,0.85);
+}
+#food-input {
+    border-radius: 10px;
+    font-size: 1.5vw;
+}
+.item-header {
+    color: rgb(221, 24, 33);
+    font-weight: bold;
+    font-size: 2vw;
 }
 .outside-link {
-    font-size:.8em;
-    color: teal;
+    font-size:1.5vw;
+    color: rgb(161,198,66);
 }  
+.item-section {
+    border: .3vw solid rgb(161,198,66);
+    margin-bottom: 2vw;
+    border-radius: 10px;
+    display:flex;
+}
+ul {
+    padding-left:0;
+    list-style-type: none;
+}
