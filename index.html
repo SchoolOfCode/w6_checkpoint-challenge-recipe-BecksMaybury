@@ -4,25 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <title>Grub's Up!</title>
+    <title>grub's up</title>
   </head>
   <body>
     <header>
       <h1>
         <img id = "logo" src= "images/logo.jpg">
-        Grub's Up!
-        <h2>Finding food inspiration has never been so easy....</h2>
+        grub's up...!
+        <h2>finding food inspiration has never been so easy</h2>
       </h1>
     </header>
     <section id="search-section">
-      <input
-        aria-label="food-input"
-        id="food-input"
-        onchange="handleFoodChange()"
-      />
-      <button id="recipe-button">
-        Give me recipe ideas!
-      </button>
+        <input
+          aria-label="food-input"
+          id="food-input"
+          onchange="handleFoodChange()"
+        />
+        <button id="recipe-button">
+          Give me recipe ideas!
+        </button>
+      </section>
+      <section id="filter-section">
+        <label for="vegetarian">Vegetarian
+          <input type="checkbox"  id="vegetarian" name="health-label" value="vegetarian">
+        </label>
+        <label for="vegan">Vegan
+          <input type="checkbox"  id="vegan" name="health-label" value="vegan">
+        </label>
+        <label for="fat-free">Fat-free
+          <input type="checkbox"  id="fat-free" name="health-label" value="fat-free">
+        </label>
+        <label for="low-sugar">Low Sugar
+          <input type="checkbox"  id="low-sugar" name="health-label" value="low-sugar">
+        </label>
+        <label for="gluten-free">Gluten-free
+          <input type="checkbox"  id="gluten-free" name="health-label" value="gluten-free">
+        </label>
+    </section>
+    </section>
+    </section>
+    </section>
     </section>
     <section id="recipe-section">
       <ul id="recipe-list"></ul>

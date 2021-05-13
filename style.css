@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color:  rgb(237, 248, 207);
 }
 header{
@@ -11,8 +11,8 @@ header{
     
 }
 #logo {
-    width: 18vw;
-    height: 18vw;
+    width: 15vw;
+    height: 15vw;
 }
 img {
     display: block;
@@ -24,8 +24,9 @@ img {
 h1{
     display: flex;
     color: rgb(221, 24, 33);
-    font-size: 8vw     ;
-    font-style: italic;  
+    font-size: 8vw;
+    /* font-style: italic;   */
+    text-shadow: 2px 2px 5px rgb(68, 5, 8) ;
     margin-top: 0px;
     margin-bottom: 0px;
     width: 100%; 
@@ -34,22 +35,42 @@ h1{
 }
 h2{
     /* display: block; */
+    /* text-shadow: 2px 2px 5px  rgb(137, 189, 5) ; */
     align-items: center;
     font-size: 2.5vw;
     color: rgb(161,198,66);
 }
 #search-section {
     border-top: 1vw solid rgb(161,198,66);
-    border-bottom: .5vw inset rgb(161,198,66);
+    border-radius: 15px;
+    /* border-bottom: .5vw inset rgb(161,198,66); */
     display:flex;
+    /* flex-direction: column; */
     justify-content: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 3%;
+    font-size: 1.8vw;
+    /* padding-bottom: 3%; */
     /* padding: 12%; */
+}
+#filter-section {
+    /* border-top: 1vw solid rgb(161,198,66); */
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    /* justify-items: space-around; */
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 1.3vw;
+    /* padding: 12%; */
+    margin: 0% 20%;
+}
+#recipe-section {
+border-top: .5vw solid rgb(161,198,66);
+border-radius: 10px;
 }
 #recipe-button{
     border-radius: 10px;
-    height: 2vw;
+    height: 2.4vw;
     font-size: 1.5vw;
     font-weight: bold;
     color:rgb(61, 59, 59);
@@ -58,21 +79,19 @@ h2{
 #food-input {
     border-radius: 10px;
     font-size: 1.5vw;
+    height: 2vw;
 }
 .item-header {
     color: rgb(221, 24, 33);
+    text-shadow: .8px .8px 1.8px rgb(68, 5, 8) ;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 .outside-link {
-    font-size:1.5vw;
+    font-size:1.4vw;
     color: rgb(161,198,66);
 }  
-.inner-link {
-    font-size:1.5vw;
-    color: rgb(12,155,75);
-    text-decoration: underline;
-}  
+
 .item-section {
     border: .3vw solid rgb(161,198,66);
     margin-bottom: 2vw;
@@ -94,4 +113,7 @@ ul {
 }
 .hide-health-info {
     display:none;
+}
+span{
+    font-size:1vw;
 }
