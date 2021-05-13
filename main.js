@@ -5,6 +5,8 @@ let foodToSearch = null;
 let button = document.querySelector('#recipe-button');
 let input = document.querySelector('#food-input');
 button.addEventListener('click', createRecipeListing);
+// let vegetarianFilter = document.querySelector('#vegetarian');
+// vegetarianFilter.addEventListener ()
 
 // async function handleRecipeClick() {
   // let recipe = await fetchRecipe(foodToSearch);
@@ -58,7 +60,7 @@ async function createRecipeListing() {
       liItem.id = i;
       // create servings info
       let liItemServings = document.createElement("span");
-      liItemServings.innerText = "Serves: " + items[i].recipe.yield;
+      liItemServings.innerText = "Serves: " + Math.floor(items[i].recipe.yield);
       // create calories info
       let liItemTotalCalories = (items[i].recipe.calories/items[i].recipe.yield);
       let liItemCalories = document.createElement("span");
@@ -73,7 +75,7 @@ async function createRecipeListing() {
       // create ingredients info
         // let liItemIngredients = document.createElement("p");
         // liItemIngredients.innerText = items[i].recipe.ingredientLines.toString();
-       // liItemIngredients.classList.add("hide-ingredients");
+      //  liItemIngredients.classList.add("hide-ingredients");
       // create show health labels link
         // let liItemHealthInfoLink = document.createElement("a");
         // liItemHealthInfoLink.innerText = "show health info";
