@@ -1,6 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color:  rgba(248, 255, 230 .5);
+    background-color:  rgba(248, 255, 230, .5);
 }
 header{
     display:flex;
@@ -21,7 +21,7 @@ img {
     height: 10vw;
     /* padding: 1vw; */
     border-radius: 15px;
-    border: 4px solid rgb(137, 189, 5);
+    border: 2.5px solid #12a04d;
 }
 #header-section{
     display: flex;
@@ -45,7 +45,7 @@ h2{
     /* text-shadow: 2px 2px 5px  rgb(137, 189, 5) ; */
     align-items: center;
     font-size: 2.5vw;
-    color: rgb(161,198,66);
+    color: #12a04d;
 }
 #search-section {
     /* border-top: 1vw solid rgb(161,198,66); */
@@ -71,22 +71,34 @@ h2{
     /* padding: 12%; */
     margin: 0% 20%;
 }
+.checkbox{
+    width: 1.2vw;
+    height: 1.2vw;
+}
+label input:checked ~ .checkbox:after{
+    /* background-color:
+    color: #12a04d; */
+}
+
 #recipe-section {
-border-top: .5vw solid rgb(161,198,66);
+/* border-top: .5vw solid rgb(161,198,66); */
 border-radius: 10px;
 }
 #recipe-button{
     border-radius: 10px;
-    height: 2.4vw;
+    height: 3.5vw;
     font-size: 1.5vw;
     font-weight: bold;
-    color:rgb(61, 59, 59);
-    background-color: rgba(161,198,66,0.85);
+    color: white;
+    background-color: #12a04d;
+    padding: .5vw;
 }
 #food-input {
     border-radius: 10px;
     font-size: 1.5vw;
-    height: 2vw;
+    height: 3vw;
+    margin-right: 1.5vw;
+    width: 35%;
 }
 .item-header {
     display:flex;
@@ -96,11 +108,15 @@ border-radius: 10px;
     /* text-shadow: .8px .8px 1.8px rgb(68, 5, 8) ; */
     font-weight: bold;
     font-size: 1.5vw;
+    margin-bottom: 1vw;
 }
 .outside-link {
     font-size:1.35vw;
+    font-weight: bold;
+    /* text-decoration: none; */
     color: rgb(221, 24, 33);
-    padding-top: 1vw;
+    /* padding-top: 1vw; */
+    margin-top: 2vw;
 }  
 
 .item-section {
@@ -124,12 +140,6 @@ ul {
     display:flex;
     margin: 1vw;
     flex-direction: column;
-}
-.hide-ingredients{
-    display:none;
-}
-.hide-health-info {
-    display:none;
 }
 span{
     font-size:1vw;

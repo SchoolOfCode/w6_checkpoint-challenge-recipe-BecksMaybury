@@ -5,8 +5,17 @@ let foodToSearch = null;
 let button = document.querySelector('#recipe-button');
 let input = document.querySelector('#food-input');
 button.addEventListener('click', createRecipeListing);
-// let vegetarianFilter = document.querySelector('#vegetarian');
-// vegetarianFilter.addEventListener ()
+let vegetarianFilter = document.querySelector('#vegetarian');
+vegetarianFilter.addEventListener ('change', addVegetarianFilter);
+
+function addVegetarianFilter () {
+  let vegetarian = null;
+if (vegetarianFilter.checked === true){
+  vegetarian = '&health=vegetarian';
+}
+console.log(vegetarian);
+return vegetarian;
+}
 
 // async function handleRecipeClick() {
   // let recipe = await fetchRecipe(foodToSearch);
@@ -29,7 +38,9 @@ function handleFoodChange() {
 
 //--- write your code below ---
 
+
 async function fetchRecipe(food) {
+
   let response = await fetch(`https://api.edamam.com/search?q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&time=1%2B`);
   let result = await response.json();
   let recipeList = await result.hits;
@@ -41,6 +52,7 @@ async function fetchRecipe(food) {
 let ulRecipeList = document.querySelector('#recipe-list');
 
 async function createRecipeListing() {
+    ulRecipeList.innerHTML="";
     let items = await fetchRecipe(foodToSearch);
     console.log(items);
     for (let i=0; i<items.length; i++){
@@ -109,9 +121,4 @@ async function createRecipeListing() {
       }
       liSubSection.appendChild(liItemLink);
     }
-  }
-  // ISSUE HERE
-  function showItems(){
-  liItemHealthInfo.classList.remove;
-  liItemHealthInfoLink.innerText = "hide health info"
   }
