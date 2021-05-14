@@ -40,8 +40,32 @@ function handleFoodChange() {
 
 
 async function fetchRecipe(food) {
-
-  let response = await fetch(`https://api.edamam.com/search?q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&time=1%2B`);
+  const vegetarian = document.getElementById("vegetarian").checked
+  const vegan = document.getElementById("vegan").checked
+  const peanutFree = document.getElementById("peanut-free").checked
+  const lowSugar = document.getElementById("low-sugar").checked
+  const glutenFree = document.getElementById("gluten-free").checked
+  let healthLabelFilter = "";
+  if (vegetarian || vegan || peanutFree || lowSugar || glutenFree) {
+    // healthLabelFilter = "&health=";
+    if (vegetarian) {
+      healthLabelFilter += "&health=vegetarian";
+      }
+    if (vegan) {
+      healthLabelFilter += "&health=vegan";
+      }
+    if (peanutFree) {
+      healthLabelFilter += "&health=peanut-free";
+      }
+    if (lowSugar) {
+      healthLabelFilter += "&health=sugar-conscious";
+      }
+    if (glutenFree) {
+      healthLabelFilter += "&health=gluten-free";
+      }
+    console.log(healthLabelFilter);
+  }
+  let response = await fetch(`https://api.edamam.com/search?q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&to=9&time=1%2B${healthLabelFilter}`);
   let result = await response.json();
   let recipeList = await result.hits;
   // console.log(recipeList);

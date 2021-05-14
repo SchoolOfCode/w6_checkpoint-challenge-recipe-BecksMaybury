@@ -72,12 +72,12 @@ h2{
     margin: 0% 20%;
 }
 .checkbox{
-    width: 1.2vw;
-    height: 1.2vw;
+    width: 1.5vw;
+    height: 1.5vw;
 }
-label input:checked ~ .checkbox:after{
-    /* background-color:
-    color: #12a04d; */
+
+#filter-section input:checked ~.checkbox{
+    background-color: #12a04d;
 }
 
 #recipe-section {
