@@ -142,6 +142,11 @@ ul {
     flex-direction: column;
 }
 span{
-    font-size:1vw;
+    font-size: 1.1vw;
     padding-top: .5vw
+}
+
+p {
+    color: #12a04d;
+    font-style: italic;
 }

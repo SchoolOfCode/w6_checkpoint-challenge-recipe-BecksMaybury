@@ -86,6 +86,9 @@ async function createRecipeListing() {
       // create image
       let liItemImage = document.createElement("img");
       liItemImage.src = items[i].recipe.image;
+      // create source info
+      let liItemSource = document.createElement("p");
+      liItemSource.innerHTML = "By " + items[i].recipe.source;
       // create recipe details section
       let liSubSection = document.createElement("section");
       liSubSection.classList.add("item-details")
@@ -144,5 +147,6 @@ async function createRecipeListing() {
         console.log("blah");
       }
       liSubSection.appendChild(liItemLink);
+      liSubSection.appendChild(liItemSource);
     }
   }
