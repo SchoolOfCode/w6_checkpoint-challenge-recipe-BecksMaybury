@@ -20,19 +20,19 @@ async function fetchRecipe(food) {
   if (vegetarian || vegan || peanutFree || lowSugar || glutenFree) {
     if (vegetarian) {
       healthLabelFilter += "&health=vegetarian";
-      }
+    }
     if (vegan) {
       healthLabelFilter += "&health=vegan";
-      }
+    }
     if (peanutFree) {
       healthLabelFilter += "&health=peanut-free";
-      }
+    }
     if (lowSugar) {
       healthLabelFilter += "&health=sugar-conscious";
-      }
+    }
     if (glutenFree) {
       healthLabelFilter += "&health=gluten-free";
-      }
+    }
     console.log(healthLabelFilter);
   }
   let response = await fetch(`https://api.edamam.com/search?q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&to=9&time=1%2B${healthLabelFilter}`);
@@ -41,19 +41,19 @@ async function fetchRecipe(food) {
   return recipeList;
 }
 
-let ulRecipeList = document.querySelector('#recipe-list');
-
 async function createRecipeListing() {
-    ulRecipeList.innerHTML="";
-    let items = await fetchRecipe(foodToSearch);
-    console.log(items);
-    for (let i=0; i<items.length; i++){
-      // create recipe section
+  let ulRecipeList = document.querySelector('#recipe-list');
+  ulRecipeList.innerHTML="";
+  let items = await fetchRecipe(foodToSearch);
+  console.log(items);
+  for (let i=0; i<items.length; i++){
+    // create recipe section
       let liSection = document.createElement("section");
       liSection.classList.add("item-section");
       // create image
       let liItemImage = document.createElement("img");
       liItemImage.src = items[i].recipe.image;
+      liItemImage.alt = "food picture"
       // create source info
       let liItemSource = document.createElement("p");
       liItemSource.innerHTML = "By " + items[i].recipe.source;
