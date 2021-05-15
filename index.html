@@ -3,20 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fetch</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>grub's up</title>
   </head>
   <body>
+    <header>
+     <section id="header-section">
+      <img id = "logo" src= "images/logo.jpg">
+      <h1>
+        grub's up!
+      </h1>
+     </section>
+     <h2>finding food inspiration has never been so easy</h2>
+    </header>
+    <section id="search-section">
+       <input
+          aria-label="food-input"
+          id="food-input"
+          onchange="handleFoodChange()"/>
+       <button id="recipe-button">
+          Give me recipes!
+        </button>
+      </section>
+      <section id="filter-section">
+        <label for="vegetarian">Vegetarian
+          <input type="checkbox"  id="vegetarian" name="health-label" value="vegetarian" class="checkbox">
+        </label>
+        <label for="vegan">Vegan
+          <input type="checkbox"  id="vegan" name="health-label" value="vegan"class="checkbox">
+        </label>
+        <label for="peanut-free">Peanut-free
+          <input type="checkbox"  id="peanut-free" name="health-label" value="peanut-free"class="checkbox">
+        </label>
+        <label for="low-sugar">Low Sugar
+          <input type="checkbox"  id="low-sugar" name="health-label" value="low-sugar"class="checkbox">
+        </label>
+        <label for="gluten-free">Gluten-free
+          <input type="checkbox"  id="gluten-free" name="health-label" value="gluten-free"class="checkbox">
+        </label>
+    </section>
     <section id="recipe-section">
-      <h2 class="section-heading">Welcome to the Recipe Finder!</h2>
-      <input
-        aria-label="food-input"
-        id="food-input"
-        onchange="handleFoodChange()"
-      />
-      <button id="recipe-button" onclick="handleRecipeClick()">
-        Give me a recipe!
-      </button>
-      <a id="recipe-label"></a>
+      <ul id="recipe-list"></ul>
     </section>
     <script src="./main.js"></script>
   </body>
