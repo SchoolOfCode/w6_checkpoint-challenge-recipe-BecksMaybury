@@ -1,0 +1,131 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color:  rgba(248, 255, 230, .5);
+}
+header{
+    display:flex;
+    width: 100vw;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+#logo {
+    width: 15vw;
+    height: 15vw;
+    border:none;
+}
+img {
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 15px;
+    border: 2.5px solid #12a04d;
+}
+#header-section{
+    display: flex;
+    justify-content: center;
+    
+}
+h1{
+    display: flex;
+    color: rgb(221, 24, 33);
+    font-size: 8vw;
+    text-shadow: 2px 2px 5px rgb(68, 5, 8) ;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+h2{
+    align-items: center;
+    font-size: 2.5vw;
+    color: #12a04d;
+}
+#search-section {
+    border-radius: 15px;
+    display:flex;
+    justify-content: center;
+    padding-top: 3%;
+    font-size: 1.8vw;
+}
+#filter-section {
+    display:flex;
+    justify-content: space-around;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 1.3vw;
+    margin: 0% 20%;
+}
+.checkbox{
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#filter-section input:checked ~.checkbox{
+    background-color: #12a04d;
+}
+#recipe-section {
+border-radius: 10px;
+}
+#recipe-button{
+    border-radius: 10px;
+    height: 3.5vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+    background-color: #12a04d;
+    padding: .5vw;
+}
+#food-input {
+    border-radius: 10px;
+    font-size: 1.5vw;
+    height: 3vw;
+    margin-right: 1.5vw;
+    width: 35%;
+}
+.item-header {
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 25vw;
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+}
+.outside-link {
+    font-size:1.35vw;
+    font-weight: bold;
+    color: rgb(221, 24, 33);
+    margin-top: 2vw;
+}  
+.item-section {
+    border-radius: 10px;
+    display:flex;
+    padding: 1.5vw;
+    max-width: 25vw;
+    margin: 1vw;
+    background-color: rgba(241, 253, 207, .4);
+    box-shadow: 5px 5px rgb(180, 190, 153);
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left:0;
+    list-style-type: none;
+}
+.item-details {
+    display:flex;
+    margin: 1vw;
+    flex-direction: column;
+}
+span{
+    font-size: 1.1vw;
+    padding-top: .5vw
+}
+
+p {
+    color: #12a04d;
+    font-style: italic;
+}
